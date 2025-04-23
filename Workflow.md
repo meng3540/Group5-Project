@@ -14,7 +14,7 @@ In this phase, we document the full AI inferencing workflow implemented on our *
 
 ---
 
-## ✍️ Workflow Steps
+## 🧭 Workflow Steps
 
 Below is the detailed breakdown of our workflow:
 
@@ -48,6 +48,43 @@ Below is the detailed breakdown of our workflow:
 7. **Performance Monitoring**
    - Monitor GPU and memory usage with `tegrastats`
    - Prepare for later optimizations (e.g., TensorRT)
+
+---
+
+## 🧪 Terminal Commands Used During Workflow
+
+Here are the key terminal commands used to perform setup, execution, and testing:
+
+```bash
+# System updates and base installs
+sudo apt update && sudo apt upgrade
+sudo apt install python3-pip python3-opencv git
+
+# (Optional) Install Codium via snap
+sudo snap install codium --classic
+
+# Validate Python libraries
+python3
+>>> import tensorflow as tf
+>>> import keras as kp
+>>> exit()
+
+# Clone model repo
+git clone <your_repo_link>
+cd <repo_folder>
+
+# Run object detection script
+python3 mobilenet_ssd.py
+
+# With explicit model arguments
+python3 mobilenet_ssd.py --prototxt MobileNetSSD_deploy.prototxt --weights MobileNetSSD_deploy.caffemodel
+
+# Camera test (one-liner)
+python3 -c "import cv2; cap=cv2.VideoCapture(0); print('Camera ready' if cap.isOpened() else 'Camera not found')"
+
+# Monitor GPU usage
+tegrastats
+```
 
 ---
 
@@ -86,9 +123,10 @@ Workflow/
 │   ├── MobileNetSSD_deploy.prototxt
 │   └── MobileNetSSD_deploy.caffemodel (or link)
 └── output_samples/
-    ├── train_detection.png
-    ├── tvmonitor_detection.png
-    └── chair_detection.png
+    ├── Chair.jpeg
+    ├── TV monitor.jpeg
+    ├── Train.jpeg
+    └── aeroplane.jpeg
 ```
 
 ---
