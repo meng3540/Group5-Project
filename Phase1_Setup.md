@@ -1,12 +1,12 @@
-# 🧠 Phase 1: Jetson Setup & Object Detection Prototype
+#  Phase 1: Jetson Setup & Object Detection Prototype
 
-## 📌 Overview
+## Overview
 
 This project explores the use of an embedded GPU-accelerated platform — the **NVIDIA Jetson Orin Nano** — for **real-time object detection** using a pre-trained **MobileNet SSD model**. The goal is to verify hardware setup, configure the development environment, acquire real-time camera input, and validate object detection functionality as a proof of concept.
 
 ---
 
-## 🌟 Problem Statement
+## Problem Statement
 
 Real-time object detection is critical in AI-powered systems like autonomous vehicles, security surveillance, and industrial automation. These tasks are resource-intensive and traditionally run on cloud servers. However, there's a growing need for **low-latency, high-throughput AI inference** directly at the edge.
 
@@ -17,7 +17,7 @@ We aim to:
 
 ---
 
-## ⚙️ Jetson Nano Setup & Configuration
+##  Jetson Nano Setup & Configuration
 
 Our setup followed these steps:
 
@@ -26,13 +26,13 @@ Our setup followed these steps:
 3. Enabled remote GUI access via **VNC Server** (vino) and connected from host PC
 4. Connected to WiFi and configured SSH access
 5. Installed necessary applications:
-   - 🔥 **Firefox** (via software center)
-   - 🧠 **Codium** (VS Code alternative)
-   - 🐍 **Python extension for Codium**
+   -  **Firefox** (via software center)
+   -  **Codium** (VS Code alternative)
+   -  **Python extension for Codium**
 
 ---
 
-## 🧪 Python Environment Test
+##  Python Environment Test
 
 To confirm our Python setup, we created a `.py` file and imported key ML libraries:
 
@@ -45,7 +45,7 @@ This confirmed our environment was correctly configured for AI development.
 
 ---
 
-## 📸 Camera Input & Object Detection Prototype
+##  Camera Input & Object Detection Prototype
 
 We verified the CSI/USB camera by accessing it with OpenCV:
 
@@ -63,7 +63,7 @@ python mobilenet_ssd.py
 
 ---
 
-## 🤖 Object Detection Model: MobileNet SSD
+## Object Detection Model: MobileNet SSD
 
 | Model        | Framework | Input Size | Use Case             |
 |--------------|------------|-------------|-----------------------|
@@ -77,7 +77,7 @@ python mobilenet_ssd.py
 
 ---
 
-## 🧰 Frameworks & Libraries Used
+##  Frameworks & Libraries Used
 
 | Type           | Name                     |
 |----------------|--------------------------|
@@ -90,18 +90,18 @@ python mobilenet_ssd.py
 
 ---
 
-## 🗄️ Results
+## Results
 
 We successfully performed real-time object detection using our Jetson setup. Detected objects include:
 
-- 🚆 `train` with confidence 99.9%
-- 🢑 `chair` and 💻 `tvmonitor` with confidence >85%
+- `train` with confidence 99.9%
+-  `chair` and  `tvmonitor` with confidence >85%
 
 Bounding boxes and labels were rendered live using OpenCV. Screenshots of detection results are saved in the [`camera_test_output/`](./camera_test_output) folder.
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 ```
 Phase1_Setup/
@@ -116,7 +116,7 @@ Phase1_Setup/
 
 ---
 
-## ✅ Next Steps
+##  Next Steps
 
 - Move forward with **workflow design** and formalize system architecture
 - Profile GPU performance using `tegrastats` or NVIDIA Nsight
@@ -124,4 +124,4 @@ Phase1_Setup/
 
 ---
 
-> 🔐 *This project lays the foundation for GPU-accelerated object detection on embedded systems. Stay tuned for the full workflow, optimizations, and performance profiling in Phase 2.*
+> *This project lays the foundation for GPU-accelerated object detection on embedded systems. Stay tuned for the full workflow, optimizations, and performance profiling in Phase 2.*
