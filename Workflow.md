@@ -1,12 +1,12 @@
-# 🔄 Phase 2: Workflow Design & Prototype
+#  Phase 2: Workflow Design & Prototype
 
-## 🔄 Overview
+##  Overview
 
 In this phase, we document the full AI inferencing workflow implemented on our **Jetson Orin Nano** edge device. The system captures live video input, performs object detection using the **MobileNet SSD** model accelerated through the Jetson GPU, and displays real-time results. This phase also includes a prototype demonstration that validates the core functionality of the system.
 
 ---
 
-## 📉 System Block Diagram
+## System Block Diagram
 
 ```
 [Camera Input] ---> [Image Preprocessing] ---> [MobileNet SSD (Caffe)] ---> [GPU Acceleration on Jetson] ---> [Output Frame with Bounding Boxes]
@@ -14,7 +14,7 @@ In this phase, we document the full AI inferencing workflow implemented on our *
 
 ---
 
-## 🧭 Workflow Steps
+##  Workflow Steps
 
 Below is the detailed breakdown of our workflow:
 
@@ -51,7 +51,7 @@ Below is the detailed breakdown of our workflow:
 
 ---
 
-## 🧪 Terminal Commands Used During Workflow
+##  Terminal Commands Used During Workflow
 
 Here are the key terminal commands used to perform setup, execution, and testing:
 
@@ -88,7 +88,7 @@ tegrastats
 
 ---
 
-## 🚀 Frameworks & Libraries Used
+##  Frameworks & Libraries Used
 
 | Component              | Tool/Library                   |
 |------------------------|----------------------------------|
@@ -101,7 +101,7 @@ tegrastats
 
 ---
 
-## 🔗 Resources & References
+## Resources & References
 
 - [OpenCV DNN Module Docs](https://docs.opencv.org/master/d6/d0f/group__dnn.html)
 - [NVIDIA Jetson Getting Started](https://developer.nvidia.com/embedded/learn/get-started-jetson-orin-nano-devkit)
@@ -111,7 +111,7 @@ tegrastats
 
 ---
 
-## 📁 Directory Structure
+##  Directory Structure
 
 ```
 Workflow/
@@ -131,4 +131,4 @@ Workflow/
 
 ---
 
-> ✨ This workflow is modular and can be adapted to integrate advanced features such as model optimization with TensorRT, support for multiple input streams, or deployment in edge-AI pipelines in future development phases.
+>  This workflow is modular and can be adapted to integrate advanced features such as model optimization with TensorRT, support for multiple input streams, or deployment in edge-AI pipelines in future development phases.
