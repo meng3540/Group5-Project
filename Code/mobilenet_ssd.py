@@ -5,6 +5,7 @@ import numpy as np
 import argparse
 import cv2
 
+
 # Argument parser for command-line flexibility
 parser = argparse.ArgumentParser(description='Run MobileNet-SSD object detection')
 parser.add_argument("--video", help="Path to video file. If empty, the webcam will be used")
